@@ -71,8 +71,7 @@ form{
 
 .year{
     display: grid;
-    border: 1px solid green;
-    grid-gap: 5px;
+    border-top: 1px solid green;
 }
 
 .require {
@@ -86,15 +85,67 @@ h1{
     font-weight: 300;
 }
 
-#myProgress {
-    width: 100%;
+
+
+.prog{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 200px;
+    border-top: 1px solid green;
+}
+
+#MSEProgress {
+    width: 90%;
+    justify-content: left;
+    margin-top: 30px;
     background-color: grey;
     height: 25%;
+    margin-left: 5%;
 }
-#myBar {
+#MSEBar {
     width: 1%;
-    height: 30px;
+    height: 25px;
     background-color: green;
 }
 
+#CSProgress {
+    width: 90%;
+    margin-top: 30px;
+    background-color: grey;
+    height: 25%;
+    margin-left: 5%;
+}
+#CSBar {
+    width: 1%;
+    height: 25px;
+    background-color: green;
+}
+
+#BMSProgress {
+    width: 90%;
+    justify-content: left;
+    margin-top: 30px;
+    background-color: grey;
+    height: 25%;
+    margin-left: 5%;
+}
+#BMSBar {
+    width: 1%;
+    height: 25px;
+    background-color: green;
+}
+
+#ENGProgress {
+    width: 90%;
+    justify-content: left;
+    margin-top: 30px;
+    background-color: grey;
+    height: 25%;
+    margin-left: 5%;
+}
+#ENGBar {
+    width: 1%;
+    height: 25px;
+    background-color: green;
+}
 
