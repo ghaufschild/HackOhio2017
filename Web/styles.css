@@ -11,6 +11,7 @@ html{
 
 body{
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 header{
@@ -24,6 +25,19 @@ p{
     font-size: 20px;
     color: brown;
     font-family: georgia;
+}
+
+div > p{
+    text-align: left;
+    padding: 15px;
+}
+
+form{
+    margin-left: 50px;
+    margin-bottom: 25px
+}
+
+.s2{
 }
 
 .grid {
@@ -40,7 +54,6 @@ p{
 .main {
     display: grid;
     background-color: whitesmoke;
-    height: 500px;
     padding-top: 10px;
 }
 
@@ -58,7 +71,8 @@ p{
 
 .year{
     display: grid;
-
+    border: 1px solid green;
+    grid-gap: 5px;
 }
 
 .require {
@@ -71,3 +85,16 @@ h1{
     color: teal;
     font-weight: 300;
 }
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+    height: 25%;
+}
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+
+
