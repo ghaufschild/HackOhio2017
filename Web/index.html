@@ -6,15 +6,25 @@
 	<script type="text/javascript" srs="script.js"></script>
 </head>
 <body>
+	<script src="script.js"></script>
 	<div class="grid">
 		<div class="left"></div>
 		<div class="main">
 			<header>
-				<h1>Welcome to your course progression calculator!</h1>
+				<h1 id="alpha">Welcome to your course progression calculator!</h1>
 				<p>Add classes you have already taken below...</p>
 			</header>
 			<div class="exem">
-				
+				<form action="">
+					<select name="department" onchange="printToScreen();">
+						<option value="volvo">a</option>
+						<option value="saab">b</option>
+						<option value="fiat">c</option>
+						<option value="audi">d</option>
+					</select>
+					<br><br>
+					<input type="submit">
+				</form>
 			</div>
 			<div class="year">
 				<div class="sem1">Semester 1</div>
