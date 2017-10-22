@@ -1,19 +1,24 @@
+<?php
+	include "scripts.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Class Schedule</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" srs="script.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
+	<script src="script.js"></script>
 	<div class="grid">
 		<div class="left"></div>
 		<div class="main">
 			<header>
-				<h1>Welcome to your course progression calculator!</h1>
+				<h1 id="alpha">Welcome to your course progression calculator!</h1>
 				<p>Add classes you have already taken below...</p>
 			</header>
 			<div class="exem">
+<<<<<<< HEAD
 				<p>Credit earned from AP or proficiency testing:</p>
 				<form action="/action_page.php">
 					<select name="dep">
@@ -43,6 +48,25 @@
 					<input type="submit">
 				</form>
 				</div>			
+=======
+				<form action="">
+					<select name="department" onchange="showUser(this.value);">
+						<option value="35">a</option>
+						<option value="saab">b</option>
+						<option value="27">c</option>
+						<option value="audi">d</option>
+					</select>
+					<br><br>
+				</form>
+			</div>
+			<div class="year">
+				<div class="sem1">
+					<p>Semester 1</p>
+					<p id="sick">shit</p>
+				</div>
+				
+				<div class="sem2">Semester 2</div>			
+>>>>>>> cdfc5de8e5078c2daebc5c6bf0000c989c768392
 			</div>
 			<div class="year">
 				<p>Courses Taken Second Year</p>
