@@ -4,147 +4,133 @@
 }
 
 html{
-    background-size: 100% auto;
     opacity: .85;
 }
 
-body{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-header{
+#title{
     border-bottom: 1.5px dashed black;
-    height: 90px;
-}
-
-p{
     text-align: center;
-    padding-top: 10px;
-    font-size: 20px;
-    color: brown;
-    font-family: georgia;
+    height: 100px;
+    overflow: auto;
 }
 
-div > p{
+.class-selector {
+    margin-top: 20px;
+    height:30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exam-credit {
+    text-align: center;
+    min-height: 150px;
+    background-color: darkslategray;
+    opacity: .9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    margin-top: 10px;
+}
+
+.year {
+    text-align: center;
+    min-height: 150px;
+    background-color: darkslategray;
+    opacity: .9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.semester {
+    text-align: center;
+    margin: 5px;
+    min-height: 140px;
+    background-color: darkgray;
+    opacity: .9;    
+}
+
+.class-holder {
+    align-content: center;
+    margin-top: 20px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    opacity: .9;    
+}
+
+.requirements {
+    border-style: line;
+    text-align: center;    
+    margin-top: 10px;
+    min-height: 400px;
+}
+
+.non-gen-holder {
+    margin-top: 20px;
+    min-height: 350px;
+}
+
+.gen-ed-holder {
+    margin-top: 20px;
+    min-height: 350px;
+}
+
+.gen-ed {
+    justify-content: left;
+    margin-bottom: 5px;
+    min-height: 35px;
+}
+
+.class-name-gen {
+    display: inline-block;
+    width: 70%;
     text-align: left;
-    padding: 15px;
 }
 
-form{
-    margin-left: 50px;
-    margin-bottom: 25px
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
-.s2{
+img {
+    background: #3A6F9A;
+    vertical-align: middle;
+    max-height: 25px;
+    max-width: 160px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
+.completion {
+    display: inline-block;
+    background-image: url(X.png);
+    background-size: 100% auto;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
 }
 
-@media (min-width: 425px) {
-    .grid {
-        grid-template-columns: 1fr 8fr 1fr;
-    }
+.non-gen {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 100px;
 }
 
-.main {
-    display: grid;
-    background-color: whitesmoke;
-    padding-top: 10px;
-}
-
-@media (min-width: 525){
-    .grid{
-        grid-template-columns: 1fr 6fr 1fr;
-    }
-}
-
-@media (min-width: 425px) {
-    .year {
-        grid-template-columns: repeat(2, 1fr);     
-    }
-}
-
-.year{
-    display: grid;
-    border-top: 1px solid green;
-}
-
-.require {
-    background-color: green;
-}
-
-h1{
-    font-family: verdana;
+.class-name {
     text-align: center;
-    color: teal;
-    font-weight: 300;
 }
 
-
-
-.prog{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 200px;
-    border-top: 1px solid green;
-}
-
-#MSEProgress {
+.bgBar {
     width: 90%;
     justify-content: left;
-    margin-top: 30px;
+    margin-top: 10px;
     background-color: grey;
-    height: 25%;
+    height: 25px;
     margin-left: 5%;
 }
-#MSEBar {
-    width: 1%;
+.fgBar {
+    width: 0%;
     height: 25px;
     background-color: green;
 }
-
-#CSProgress {
-    width: 90%;
-    margin-top: 30px;
-    background-color: grey;
-    height: 25%;
-    margin-left: 5%;
-}
-#CSBar {
-    width: 1%;
-    height: 25px;
-    background-color: green;
-}
-
-#BMSProgress {
-    width: 90%;
-    justify-content: left;
-    margin-top: 30px;
-    background-color: grey;
-    height: 25%;
-    margin-left: 5%;
-}
-#BMSBar {
-    width: 1%;
-    height: 25px;
-    background-color: green;
-}
-
-#ENGProgress {
-    width: 90%;
-    justify-content: left;
-    margin-top: 30px;
-    background-color: grey;
-    height: 25%;
-    margin-left: 5%;
-}
-#ENGBar {
-    width: 1%;
-    height: 25px;
-    background-color: green;
-}
-
