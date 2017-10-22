@@ -54,16 +54,12 @@ function activateButton(str) {
 }
 
 function addClassToSemester(semester, courseID) {
-
     var newDiv = document.createElement("div");
     newDiv.setAttribute("id", courseID);
 
-
     if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
     } else {
-        // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp.onreadystatechange = function () {
@@ -72,9 +68,6 @@ function addClassToSemester(semester, courseID) {
 
             newDiv.innerHTML = this.responseText;
             document.getElementById("currentClasses").append(newDiv);
-
-
-
         }
     };
     xmlhttp.open("GET", "queryOneClass.php?q=" + courseID, true);
@@ -92,11 +85,8 @@ function removeCourse(semester, courseID) {
 
         if (children[index].getAttribute("id") == courseID) {
             children[index].parentNode.removeChild(children[index]);
-
         }
     }
-
-
 }
 
 function updateProgress() {

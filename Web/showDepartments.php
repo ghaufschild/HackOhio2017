@@ -15,7 +15,7 @@ while($row = $result->fetch_assoc())
 }
 
 echo '<form action="">
-<select name="dep" onchange="showClass(this.value);">
+<select id="dep" onchange="showClass(this.value);">
 <option value<-1>Select a department...</option>';
 
 foreach($rows as $value)
