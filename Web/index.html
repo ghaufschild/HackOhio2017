@@ -18,10 +18,9 @@
 				<p>Add classes you have already taken below...</p>
 			</header>
 			<div class="exem">
-<<<<<<< HEAD
 				<p>Credit earned from AP or proficiency testing:</p>
 				<form action="/action_page.php">
-					<select name="dep">
+					<select name="dep" onchange="showUser(this.value);">
 						<option value="volvo">Select a department</option>
 					</select>
 					<br><br>
@@ -32,7 +31,7 @@
 				<p>Courses Taken First Year</p>
 				<div class="sem1">
 					<form action="/action_page.php">
-						<select name="department">
+						<select name="department" onchange="showUser(this.value);">
 							<option value="dep">Select a department</option>>
 						</select>
 						<br><br>
@@ -48,25 +47,6 @@
 					<input type="submit">
 				</form>
 				</div>			
-=======
-				<form action="">
-					<select name="department" onchange="showUser(this.value);">
-						<option value="35">a</option>
-						<option value="saab">b</option>
-						<option value="27">c</option>
-						<option value="audi">d</option>
-					</select>
-					<br><br>
-				</form>
-			</div>
-			<div class="year">
-				<div class="sem1">
-					<p>Semester 1</p>
-					<p id="sick">shit</p>
-				</div>
-				
-				<div class="sem2">Semester 2</div>			
->>>>>>> cdfc5de8e5078c2daebc5c6bf0000c989c768392
 			</div>
 			<div class="year">
 				<p>Courses Taken Second Year</p>
