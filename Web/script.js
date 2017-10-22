@@ -45,7 +45,7 @@ function startUp() {
 function addClassToSemester(semester, courseID) {
 
     var newDiv = document.createElement("div");
-    newDiv.setAttribute("id", courseID);
+    newDiv.setAttribute("id", courseID+"");
     
 
     if (window.XMLHttpRequest) {
@@ -60,31 +60,37 @@ function addClassToSemester(semester, courseID) {
         if (this.readyState == 4 && this.status == 200) {
 
             newDiv.innerHTML = this.responseText;
-            document.getElementById("currentClasses").append(newDiv);
-
             
+
+            document.getElementById("currentClasses").append(newDiv);
+            document.getElementById("test").innerHTML = courseID+"";
+
+            var parsedCourseNumber = document.getElementById(courseID + "").children[0].innerHTML;
+            var parsedCourseNameAndNumber = document.getElementById(courseID + "").children[1].innerHTML + document.getElementById(courseID + "").children[0].innerHTML; //retrieved using courseID
+            
+            document.getElementById("sem" + semester).children[0].innerHTML += "<div id = '" + parsedCourseNumber + "'><p>" + parsedCourseNameAndNumber + "</p><button type='button' onclick='removeCourse(" + semester + "," + courseID + "," + parsedCourseNumber + ")'>remove</button></div>";
 
         }
     };
     xmlhttp.open("GET","queryOneClass.php?q="+courseID,true);
     xmlhttp.send();
     
-    var parsedCourseName = "FUCKIG SHIT TITTIES"; //retrieved using courseID
-    document.getElementById("sem" + semester).children[0].innerHTML += "<div id = '" + courseID + "'><p>" + parsedCourseName + "</p><button type='button' onclick='removeCourse(" + semester + "," + courseID + ")'>remove</button></div>";
+    
     
 }
 
-function removeCourse(semester, courseID) {
+function removeCourse(semester, courseID, courseNumber) {
     var children = document.getElementById("sem" + semester).children[0].children;
     var index;
     for (index=0; index < children.length; ++index) {
 
-        if (children[index].getAttribute("id") == courseID) {
+        if (children[index].getAttribute("id") == courseNumber) {
             children[index].parentNode.removeChild(children[index]);
         
         }
     }
 
+    document.getElementById(courseID).parentNode.removeChild(document.getElementById(courseID));
     
 }
 
