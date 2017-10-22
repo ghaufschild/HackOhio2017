@@ -20,7 +20,7 @@
 			<div class="exem">
 				<p>Credit earned from AP or proficiency testing:</p>
 				<form action="/action_page.php">
-					<select name="dep">
+					<select name="dep" onchange="showUser(this.value);">
 						<option value="volvo">Select a department</option>
 					</select>
 					<br><br>
@@ -31,7 +31,7 @@
 				<p>Courses Taken First Year</p>
 				<div class="sem1">
 					<form action="/action_page.php">
-						<select name="department">
+						<select name="department" onchange="showUser(this.value);">
 							<option value="dep">Select a department</option>>
 						</select>
 						<br><br>
@@ -46,6 +46,7 @@
 					<br><br>
 					<input type="submit">
 				</form>
+<<<<<<< HEAD
 				</div>
 				<form action="">
 					<select name="department" onchange="showUser(this.value);">
@@ -62,6 +63,9 @@
 					<p id="sick">shit</p>
 				</div>
 				<div class="sem2">Semester 2</div>
+=======
+				</div>			
+>>>>>>> 01f79e4690bb2341c0b89d3085727afac05f4db0
 			</div>
 			<div class="year">
 				<p>Courses Taken Second Year</p>

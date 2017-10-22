@@ -16,7 +16,7 @@ function showUser(str) {
                 document.getElementById("sick").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","script2.php?q="+str,true);
+        xmlhttp.open("GET","scripts.php?q="+str,true);
         xmlhttp.send();
     }
 }
