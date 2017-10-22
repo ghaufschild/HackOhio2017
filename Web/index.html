@@ -1,9 +1,12 @@
+<?php
+	include "scripts.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Class Schedule</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" srs="script.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 	<div class="grid">
@@ -14,18 +17,21 @@
 			</header>
 			<div class="exem">
 				<form action="">
-					<select name="department">
-						<option value="volvo">a</option>
+					<select name="department" onchange="showUser(this.value);">
+						<option value="35">a</option>
 						<option value="saab">b</option>
-						<option value="fiat">c</option>
+						<option value="27">c</option>
 						<option value="audi">d</option>
 					</select>
 					<br><br>
-					<input type="submit">
 				</form>
 			</div>
 			<div class="year">
-				<div class="sem1">Semester 1</div>
+				<div class="sem1">
+					<p>Semester 1</p>
+					<p id="sick">shit</p>
+				</div>
+				
 				<div class="sem2">Semester 2</div>			
 			</div>
 			<div class="year">
