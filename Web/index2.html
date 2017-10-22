@@ -1,195 +1,274 @@
-<?php
-include "scripts.php";
-include "startUp.php";
-?>
-    <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
-    <head>
-        <title>Class Schedule</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="styles2.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="script.js"></script>
-    </head>
+<head>
+    <title>Class Schedule</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="styles2.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
 
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-offset-1 col-md-10">
-                    <div id="title">
-                        <h1>Welcome to your course progression calculator!</h1>
-                        <h4>Please enter your classes below...</h4>
-                    </div>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div id="title">
+                    <h1>Welcome to your course progression calculator!</h1>
+                    <h4>Please enter your classes below...</h4>
                 </div>
             </div>
-            <div id="class-selector">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-2">
-                            <div class="dropdown">
-                                <form action="">
-                                    <select id="semesters" onchange="showDepartments(this.value)">
-                                        <option value="-1">Select a semester...</option>
-                                        <option value="exem">Exam Credit</option>
-                                        <option value="sem1">Semester 1</option>
-                                        <option value="sem2">Semester 2</option>
-                                        <option value="sem3">Semester 3</option>
-                                        <option value="sem4">Semester 4</option>
-                                        <option value="sem5">Semester 5</option>
-                                        <option value="sem6">Semester 6</option>
-                                        <option value="sem7">Semester 7</option>
-                                        <option value="sem8">Semester 8</option>
-                                    </select>
-                                </form>
-                            </div>
+        </div>
+        <div id="class-selector">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <div class="dropdown">
+                            <form action="">
+                                <select id="semesters" onchange="showDepartments(this.value)">
+                                    <option value="-1">Select a semester...</option>
+                                    <option value="exem">Exam Credit</option>
+                                    <option value="sem1">Semester 1</option>
+                                    <option value="sem2">Semester 2</option>
+                                    <option value="sem3">Semester 3</option>
+                                    <option value="sem4">Semester 4</option>
+                                    <option value="sem5">Semester 5</option>
+                                    <option value="sem6">Semester 6</option>
+                                    <option value="sem7">Semester 7</option>
+                                    <option value="sem8">Semester 8</option>
+                                </select>
+                            </form>
                         </div>
-                        <div class="col-md-3">
-                            <div class="dropdown">
-                                <div id="department"></div>
-                            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                            <div id="department"></div>
                         </div>
-                        <div class="col-md-offset-1 col-md-2">
-                            <div class="dropdown">     
-                                <div id="classes"></div>
-                            </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-2">
+                        <div class="dropdown">
+                            <div id="classes"></div>
                         </div>
-                        <div class="col-md-offset-1 col-md-1">
-                            <div class="dropdown">
-                                <input id="clickMe" class="myButton" type="button" value="Add Class" onclick="addClassToSemester(document.getElementById(semesters.value), document.getElementById(classNum).value);" disabled/>  
-                            </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-1">
+                        <div class="dropdown">
+                            <input id="clickMe" class="myButton" type="button" value="Add Class" onclick="addClassToSemester(document.getElementById('semesters').value, document.getElementById('classNum').value);"
+                                disabled/>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="exam-credit" id="exem">
+                    <h3>Exam Credit</h3>
+                    <div class="class-holder">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="year">
+            <h3>Year 1</h3>
             <div class="row">
-                <div class="col-md-offset-1 col-md-10" id="exem">
-                    <div class="exam-credit">
-                        <h3>Exam Credit</h3>
+                <div class="col-md-6 col-sm-12">
+                    <div class="semester" id="sem1">
+                        <h4>Semester 1</h4>
                         <div class="class-holder">
 
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="year">
-                <h3>Year 1</h3>
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="semester" id="sem1">
-                            <h4>Semester 1</h4>
-                            <div class="class-holder">
+                <div class="col-md-6 col-sm-12">
+                    <div class="semester" id="sem2">
+                        <h4>Semester 2</h4>
+                        <div class="class-holder">
 
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="semester" id="sem2">
-                            <h4>Semester 2</h4>                                
-                            <div class="class-holder">
-
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
             </div>
-            <div class="year">
-                    <h3>Year 2</h3>
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="semester" id="sem3">
-                                <h4>Semester 3</h4>
-                            <div class="class-holder">
+        </div>
+        <div class="year">
+            <h3>Year 2</h3>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="semester" id="sem3">
+                        <h4>Semester 3</h4>
+                        <div class="class-holder">
 
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-
-                        <div class="semester" id="sem4">
-                                <h4>Semester 4</h4>
-                            <div class="class-holder">
-
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-            <div class="year">
-                    <h3>Year 3</h3>
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="semester" id="sem5">
-                                <h4>Semester 5</h4>                                
-                            <div class="class-holder">
+                <div class="col-md-6 col-sm-12">
 
-                            </div>
+                    <div class="semester" id="sem4">
+                        <h4>Semester 4</h4>
+                        <div class="class-holder">
+
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="semester" id="sem6">
-                                <h4>Semester 6</h4>
-                            <div class="class-holder">
-
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
             </div>
-            <div class="year">                
-                <h3>Year 4</h3>
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="semester" id="sem7">
-                                <h4>Semester 7</h4>                                
-                            <div class="class-holder">
+        </div>
+        <div class="year">
+            <h3>Year 3</h3>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="semester" id="sem5">
+                        <h4>Semester 5</h4>
+                        <div class="class-holder">
 
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="semester" id="sem8">
-                                <h4>Semester 8</h4>                                
-                            <div class="class-holder">
-
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-            <div class="requirements">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="non-gen-holder">
-                            <div class="non-gen" id="CSE Core>
+                <div class="col-md-6 col-sm-12">
+                    <div class="semester" id="sem6">
+                        <h4>Semester 6</h4>
+                        <div class="class-holder">
 
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="year">
+            <h3>Year 4</h3>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="semester" id="sem7">
+                        <h4>Semester 7</h4>
+                        <div class="class-holder">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="semester" id="sem8">
+                        <h4>Semester 8</h4>
+                        <div class="class-holder">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="requirements">
+            <h4>Graduation Requirements</h4>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="non-gen-holder">
+                        <div class="non-gen" id="BMS">
+                            <div class="class-name">
+                                <p>Basic Math and Science</p>
                             </div>
-                            <div class="non-gen">
-                                    
+                            <div class="bgBar">
+                                <div class="fgBar"></div>
                             </div>
-                            <div class="non-gen">
-                                    
+                        </div>
+                        <div class="non-gen" id="GenEng">
+                            <div class="class-name">
+                                <p>General College of Engineering</p>
                             </div>
-                            <div class="non-gen">
-                                    
+                            <div class="bgBar">
+                                <div class="fgBar"></div>
+                            </div>
+                        </div>
+                        <div class="non-gen" id="CSC">
+                            <div class="class-name">
+                                <p>Computer Science Core</p>
+                            </div>
+                            <div class="bgBar">
+                                <div class="fgBar"></div>
+                            </div>
+                        </div>
+                        <div class="non-gen" id="MSE">
+                            <div class="class-name">
+                                <p>Math and Science Electives</p>
+                            </div>
+                            <div class="bgBar">
+                                <div class="fgBar"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="gen-eds">
-
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="gen-ed-holder">
+                        <div class="gen-ed" id="WARS">
+                            <div class="class-name-gen">
+                                <p>Writing and Related Skills</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>
+                        </div>
+                        <div class="gen-ed" id="Lit">
+                            <div class="class-name-gen">
+                                <p>Literature</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>                            
+                        </div>
+                        <div class="gen-ed" id="VPA">
+                            <div class="class-name-gen">
+                                <p>Visual and Performing Arts</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>                            
+                        </div>
+                        <div class="gen-ed" id="SSIAG">
+                            <div class="class-name-gen">
+                                <p>Social Science: Individuals and Groups</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>
+                        </div>
+                        <div class="gen-ed" id="SSOAP">
+                            <div class="class-name-gen">
+                                <p>Social Science: Organizations and Polities</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>                            
+                        </div>
+                        <div class="gen-ed" id="SSHNER">
+                            <div class="class-name-gen">
+                                <p>Social Science: Human, Natural, and Economic Resources</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>                            
+                        </div>
+                        <div class="gen-ed" id="HS">
+                            <div class="class-name-gen">
+                                <p>Historical Study</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>                            
+                        </div>
+                        <div class="gen-ed" id="CAI">
+                            <div class="class-name-gen">
+                                <p>Cultural and Ideas</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>                            
+                        </div>
+                        <div class="gen-ed" id="PE">
+                            <div class="class-name-gen">
+                                <p>Professional Ethics</p>
+                            </div>
+                            <span class="helper"><div class="completion"></div></span>                            
+                        </div>
+                        <div class="gen-ed" id="SD">
+                                <div class="class-name-gen">
+                                    <p>Social Diversity</p>
+                                </div>
+                                <span class="helper"><div class="completion"></div></span>                                
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div id="test">
-        </div>
-    </body>
+    <div id="test">
+    </div>
 
-    </html>
+    <div id="currentClasses" hidden></div>
+</body>
+
+</html>
