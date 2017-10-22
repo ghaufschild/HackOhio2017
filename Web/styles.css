@@ -3,6 +3,29 @@
     padding: 0;
 }
 
+html{
+    background-image: url(elijah-o-donell-392340.jpg);
+    background-size: 100% auto;
+    opacity: .85;
+}
+
+body{
+    margin-top: 50px;
+}
+
+header{
+    border-bottom: 1.5px dashed black;
+    height: 90px;
+}
+
+p{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    color: brown;
+    font-family: georgia;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
@@ -38,14 +61,6 @@
 
 }
 
-.sem1 {
-    background-color: yellow;
-}
-
-.sem2 {
-    background-color: yellowgreen;
-}
-
 .require {
     background-color: green;
 }
@@ -53,4 +68,6 @@
 h1{
     font-family: verdana;
     text-align: center;
+    color: teal;
+    font-weight: 300;
 }
