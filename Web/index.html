@@ -1,5 +1,6 @@
 <?php
 	include "scripts.php";
+	include "startUp.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,6 +8,8 @@
 	<title>Class Schedule</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
 </head>
 <body>
 	<script src="script.js"></script>
@@ -16,6 +19,7 @@
 			<header>
 				<h1 id="alpha">Welcome to your course progression calculator!</h1>
 				<p>Add classes you have already taken below...</p>
+
 			</header>
 			<div class="exem">
 				<p>Credit earned from AP or proficiency testing:</p>
@@ -30,12 +34,13 @@
 			<div class="year">
 				<p>Courses Taken First Year</p>
 				<div class="sem1">
-					<form action="/action_page.php">
-						<select name="department" onchange="showUser(this.value);">
-							<option value="dep">Select a department</option>>
+					<form action="">
+						<select id="department" onchange="showUser(this.value);">
+							<option value=-1>Select a department...</option>
+							<option value=35>Engineering</option>
 						</select>
 						<br><br>
-						<input type="submit">
+						<div id="sick"></div>
 					</form>
 				</div>
 				<div class="sem2">
