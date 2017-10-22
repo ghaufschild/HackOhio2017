@@ -1,65 +1,74 @@
-function showUser(int) {
-    if (int == -1) {
-        document.getElementById("sick").innerHTML = "";
+function showClass(int) {
+    if (int == "-1") {
+        document.getElementById("classes").innerHTML = "";
+        document.getElementById("clickMe").disabled = true;
         return;
-    } else { 
+    } else {
         if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
         } else {
-            // code for IE6, IE5
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.onreadystatechange = function() {
-            
+        xmlhttp.onreadystatechange = function () {
+
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("sick").innerHTML = this.responseText;
+                document.getElementById("classes").innerHTML = this.responseText;
+                document.getElementById("test").innerHTML = int;
             }
         };
-        xmlhttp.open("GET","scripts.php?q="+int,true);
+        xmlhttp.open("GET", "showClass.php?q=" + int, true);
         xmlhttp.send();
     }
 }
 
-$(window).on("load", startUp);
-
-function startUp() {
-    // put Ajax here.
+function showDepartments(str) {
+    document.getElementById("test").innerHTML = "<h1>" + str + "</h1>";
+    if (str == "-1") {
+        document.getElementById("classes").innerHTML = "";
+        document.getElementById("department").innerHTML = "";
+        document.getElementById("clickMe").disabled = true;
+        return;
+    } else {
         if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
         } else {
-            // code for IE6, IE5
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.onreadystatechange = function() {
-            
+        xmlhttp.onreadystatechange = function () {
+
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("department").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","startUp.php",true);
+        xmlhttp.open("GET", "showDepartments.php", true);
         xmlhttp.send();
+    }
+}
+
+function activateButton(str) {
+    if (str == "-1") {
+        document.getElementById("clickMe").disabled = true;
+    } else {
+        document.getElementById("clickMe").disabled = false;
+    }
 }
 
 function addClassToSemester(semester, courseID) {
     var newDiv = document.createElement("div");
-    newDiv.setAttribute("id", courseID+"");
-    
+    newDiv.setAttribute("id", courseID + "");
+
 
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
     } else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.onreadystatechange = function() {
-        
+    xmlhttp.onreadystatechange = function () {
+
         if (this.readyState == 4 && this.status == 200) {
 
             newDiv.innerHTML = this.responseText;
 
-            document.getElementById("currentClasses").append(newDiv);
-            document.getElementById("test").innerHTML = courseID+"";
 
             document.getElementById("currentClasses").append(newDiv);
 
@@ -70,7 +79,7 @@ function addClassToSemester(semester, courseID) {
             updateProgress();
         }
     };
-    xmlhttp.open("GET","queryOneClass.php?q="+courseID,true);
+    xmlhttp.open("GET", "queryOneClass.php?q=" + courseID, true);
     xmlhttp.send();
 
 
