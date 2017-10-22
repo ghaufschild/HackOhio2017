@@ -5,7 +5,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT * FROM DEPARTMENT";
+$sql="SELECT * FROM CLASS WHERE DepartmentID = $q";
 $result = mysqli_query($con,$sql);
 $resultData[] = array();
 
@@ -15,14 +15,14 @@ while($row = $result->fetch_assoc())
 }
 
 echo '<form action="">
-<select name="classes" onchange="showUser(this.value);">';
+<select name="classes" onchange="activateButton(this.value)">
+<option value="-1">Select a course number...</option>';
+
 foreach($rows as $value)
 {
-    echo '<option value='.$value['ID'].'>'.$value['Name'].'</option>';
+    echo '<option value='.$value['ID'].'>'.$value['Number'].'</option>';
 }
 echo '</select>
-<br><br>
-<div id="sick"></div>
 </form>';
 mysqli_close($con);
 ?>

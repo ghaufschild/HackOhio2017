@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-image: url(elijah-o-donell-392340.jpg);
+    background-size: 100% auto;
+    opacity: .85;
+}
+
+#title{
+    border-bottom: 1.5px dashed black;
+    text-align: center;
+    height: 100px;
+    overflow: auto;
+}
+
+.class-selector {
+    margin-top: 20px;
+    height:30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exam-credit {
+    text-align: center;
+    min-height: 150px;
+    background-color: green;
+    opacity: .9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    margin-top: 10px;
+}
+
+.year {
+    text-align: center;
+    min-height: 150px;
+    background-color: green;
+    opacity: .9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.semester {
+    text-align: center;
+    margin: 5px;
+    min-height: 140px;
+    background-color: yellow;
+    opacity: .9;    
+}
+
+.class-holder {
+    align-content: center;
+    margin-top: 20px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    background-color: red;
+    opacity: .9;    
+}
