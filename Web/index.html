@@ -13,143 +13,15 @@
 </head>
 <body>
 	<script src="script.js"></script>
-	<div class="grid">
-		<div class="left"></div>
-		<div class="main">
-			<header>
-				<h1 id="alpha">Welcome to your course progression calculator!</h1>
-				<p>Add classes you have already taken below...</p>
-
-			</header>
-			<div class="exem">
-				<p>Credit earned from AP or proficiency testing:</p>
-				<form action="/action_page.php">
-					<select name="dep" onchange="showUser(this.value);">
-						<option value="volvo">Select a department</option>
-					</select>
-					<br><br>
-					<input type="submit">
-				</form>
-			</div>
-			<div class="year">
-				<p>Courses Taken First Year</p>
-				<div class="sem1">
-					<form action="">
-						<select id="department" onchange="showUser(this.value);">
-							<option value=-1>Select a department...</option>
-							<option value=35>Engineering</option>
-						</select>
-						<br><br>
-						<div id="sick"></div>
-					</form>
-				</div>
-				<div class="sem2">
-					<form class="s2" action="/action_page.php">
-					<select name="dep">
-						<option value="volvo">Select a department</option>
-					</select>
-					<br><br>
-					<input type="submit">
-				</form>
-<<<<<<< HEAD
-				</div>
-				<form action="">
-					<select name="department" onchange="showUser(this.value);">
-						<option value="35">a</option>
-						<option value="saab">b</option>
-						<option value="27">c</option>
-						<option value="audi">d</option>
-					</select>
-				</form>
-			</div>
-			<div class="year">
-				<div class="sem1">
-					<p>Semester 1</p>
-					<p id="sick">shit</p>
-				</div>
-				<div class="sem2">Semester 2</div>
-=======
-				</div>			
->>>>>>> 01f79e4690bb2341c0b89d3085727afac05f4db0
-			</div>
-			<div class="year">
-				<p>Courses Taken Second Year</p>
-				<div class="sem1">
-					<form action="/action_page.php">
-					<select name="dep">
-						<option value="volvo">Select a department</option>
-					</select>
-				</form>
-				</div>
-				<div class="sem2">
-					<form class="s2" action="/action_page.php">
-					<select name="dep">
-						<option value="volvo">Select a department</option>
-					</select>
-				</form>
-				</div>
-			</div>
-			<div class="year">
-				<p>Courses Taken Third Year</p>
-				<div class="sem1">
-					<form action="/action_page.php">
-					<select name="dep">
-						<option value="volvo">Select a department</option>
-					</select>
-				</form>
-				</div>
-				<div class="sem2">
-					<form class="s2" action="/action_page.php">
-					<select name="dep">
-						<option value="volvo">Select a department</option>
-					</select>
-				</form>
-				</div>	
-			</div>
-			<div class="year">
-				<p>Courses Taken Fourth Year</p>
-				<div class="sem1">
-					<form action="/action_page.php">
-					<select name="dep">
-						<option value="volvo">Select a department</option>
-					</select>
-					</form>
-				</div>
-				<div class="sem2">
-					<form class="s2" action="/action_page.php">
-					<select name="dep">
-						<option value="volvo">Select a department</option>
-					</select>
-				</form>
-				</div>	
-			</div>
-			<div class="require"></div>
-			<div class="prog">
-				<div>
-					<div id="CSProgress">
-					<div id="CSBar"></div>
-					</div>
-					<p>Computer Science Core</p>
-				</div>
-				<div>
-					<div id="MSEProgress">
-					<div id="MSEBar"></div>
-					</div>
-				</div>
-				<div>
-					<div id="ENGProgress">
-					<div id="ENGBar"></div>
-					</div>
-				</div>
-				<div>
-					<div id="BMSProgress">
-					<div id="BMSBar"></div>
-					</div>
-				</div>
-			</div>					
-		</div>
-		<div class="right"></div>
+	<button type="button" onclick = "addClassToSemester(1,23)">add one</button>
+	<button type="button" onclick = "addClassToSemester(1,42)">add two</button>
+	<button type="button" onclick = "addClassToSemester(1,8)">add three</button>
+	<div id="sem1">
+		<div></div>
 	</div>
+
+	<div id="currentClasses"></div>
+	<div id="test"></div>
 
 </body>
 </html>
